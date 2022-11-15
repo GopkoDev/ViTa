@@ -1,19 +1,44 @@
+@import 'reset';
 @import 'fonts/fonts';
 @import 'variables';
 
 body {
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: $mainColor;
+  min-height: 100vh;
+  color: $mainColor;
 }
 
-.content_wrapper {
-  max-width: 1200px;
+.page_wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'header content'
+    'header footer';
+  max-width: 1310px;
   width: 100%;
   margin: 0 auto;
-  padding: 80px 0 42px 0;
-  background-color: $mainColor;
+  padding: 80px 15px 42px 15px;
+  position: relative;
 }
+
+.header {
+  grid-area: header;
+}
+
+.page {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+// components
+@import 'components/header';
 
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
 // @import 'base/mixins';
