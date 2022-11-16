@@ -6,23 +6,24 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  min-height: 100%;
   color: $mainColor;
-  min-height: 100vh;
-  color: $mainColor;
+}
+
+[class*='__container'] {
+  max-width: 984px;
+  margin-left: auto;
 }
 
 .page_wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    'header content'
-    'header footer';
+  grid-template-areas: 'header content';
   max-width: 1310px;
-  width: 100%;
   margin: 0 auto;
   padding: 80px 15px 42px 15px;
   position: relative;
+  min-height: 100%;
 }
 
 .header {
@@ -37,8 +38,12 @@ body {
   grid-area: footer;
 }
 
+//pages
+@import 'pages/home';
+
 // components
 @import 'components/header';
+@import 'components/button';
 
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
 // @import 'base/mixins';

@@ -2,11 +2,22 @@
 <html lang="en">
   @@include('html/_head.htm',{ "title":"HomePage" })
   <body>
-    <div class="page_wrapper">
+    <section class="page_wrapper">
       @@include('html/_header.htm',{})
-      <main class="page"></main>
+      <main class="page home">
+        <section class="home__container">
+          <section class="home_img">
+            <img src="@img/home_page.png" alt="main page foto" />
+          </section>
+          <h2 class="home_phrase">
+            WHEN YOUR SPACE RESEMBLES YOU IN ALL ASPECTS. WE DESIGN YOUR
+            LIFESTYLE IN A <span>UNIQUE WAY</span>.
+          </h2>
+          <button class="button home_button">view projects</button>
+        </section>
+      </main>
       @@include('html/_footer.htm',{})
-    </div>
+    </section>
     @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
   </body>
 </html>

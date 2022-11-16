@@ -1,0 +1,23 @@
+.home {
+  &_img {
+    margin-bottom: 150px;
+    img {
+      width: 100%;
+    }
+  }
+  &_phrase {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 52px;
+    span {
+      font-weight: 500;
+    }
+  }
+  &_button {
+    display: block;
+    margin: 0 auto;
+  }
+}
