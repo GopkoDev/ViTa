@@ -1,0 +1,75 @@
+.footer {
+  &__container {
+    padding: 60px 0 42px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+  &_folow {
+    max-width: 432px;
+    width: 100%;
+
+    &--title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+    }
+    &_icons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_form {
+    // min-height: 158px;
+    margin-right: 69px;
+    display: flex;
+    flex-direction: column;
+    &--title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &_lable {
+      margin-bottom: 17px;
+      position: relative;
+      &:nth-child(3) {
+        margin-bottom: 21px;
+      }
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $mainColor;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+
+        &::placeholder {
+          color: $placeholderColor;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+      }
+    }
+    &_copyright {
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 16px;
+    }
+  }
+}

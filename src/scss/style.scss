@@ -18,10 +18,13 @@ body {
 .page_wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
-  grid-template-areas: 'header content';
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'header content'
+    'header footer';
   max-width: 1310px;
   margin: 0 auto;
-  padding: 80px 15px 42px 15px;
+  padding: 80px 15px 0 15px;
   position: relative;
   min-height: 100%;
 }
@@ -44,7 +47,7 @@ body {
 // components
 @import 'components/header';
 @import 'components/button';
-
+@import 'components/footer';
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
 // @import 'base/mixins';
 
