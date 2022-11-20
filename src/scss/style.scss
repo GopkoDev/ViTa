@@ -15,27 +15,50 @@ body {
   margin-left: auto;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .page_wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
-  grid-template-areas: 'header content';
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'header content'
+    'header footer';
   max-width: 1310px;
   margin: 0 auto;
-  padding: 80px 15px 42px 15px;
+  padding: 80px 15px 0 15px;
   position: relative;
   min-height: 100%;
 }
 
 .header {
+  box-sizing: border-box;
   grid-area: header;
 }
 
 .page {
+  box-sizing: border-box;
   grid-area: content;
 }
 
 .footer {
+  box-sizing: border-box;
   grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  .page_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'header'
+      'content'
+      'footer';
+    padding: 0;
+  }
 }
 
 //pages
@@ -44,7 +67,7 @@ body {
 // components
 @import 'components/header';
 @import 'components/button';
-
+@import 'components/footer';
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
 // @import 'base/mixins';
 

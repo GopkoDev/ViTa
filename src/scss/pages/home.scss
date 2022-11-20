@@ -8,7 +8,7 @@
   &_phrase {
     font-weight: 300;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 110%;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 52px;
@@ -19,5 +19,14 @@
   &_button {
     display: block;
     margin: 0 auto;
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    &_phrase {
+      line-height: 170%;
+    }
   }
 }

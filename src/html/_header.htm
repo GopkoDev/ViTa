@@ -2,7 +2,12 @@
   <!-- <div class="header__container">
 	</div> -->
   <h1 class="header_logo">MONICS</h1>
-  <nav>
+  <section class="header_hamburger">
+    <span class="header_hamburger--line header_hamburger--line--1"></span>
+    <span class="header_hamburger--line header_hamburger--line--2"></span>
+    <span class="header_hamburger--line header_hamburger--line--3"></span>
+  </section>
+  <nav class="nav_wrapper">
     <ul class="header_nav">
       <li class="header_nav--item active"><p>HOME</p></li>
       <li class="header_nav--item"><p>PROJECTS</p></li>
@@ -19,9 +24,31 @@
     </ul>
   </nav>
   <script>
+    //open language dropdown
     const language = document.querySelector('.language');
     language.addEventListener('click', () => {
-      language.classList.toggle('open');
+      toggleClassName(language, 'open');
     });
+    //menu hamburger
+    const body = document.querySelector('body');
+    const humburher = document.querySelector('.header_hamburger');
+    const navBody = document.querySelector('.nav_wrapper');
+    console.log(body);
+    humburher.addEventListener('click', () => {
+      toggleClassName(humburher, 'active');
+      toggleClassName(navBody, 'active');
+      toggleClassName(body, 'lock');
+      if (
+        language.classList.contains('open') &&
+        !navBody.classList.contains('active')
+      ) {
+        toggleClassName(language, 'open');
+      }
+    });
+
+    //toggle function
+    const toggleClassName = (item, className) => {
+      item.classList.toggle(className);
+    };
   </script>
 </header>

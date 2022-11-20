@@ -1,4 +1,4 @@
-button {
+.button {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -8,4 +8,5 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid $mainColor;
+  color: $mainColor;
 }
