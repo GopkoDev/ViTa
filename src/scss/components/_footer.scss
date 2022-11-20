@@ -1,4 +1,5 @@
 .footer {
+  padding-right: 69px;
   &__container {
     padding: 60px 0 42px 0;
     display: flex;
@@ -6,8 +7,10 @@
     margin-left: auto;
   }
   &_folow {
+    max-height: 158px;
     max-width: 432px;
     width: 100%;
+    margin-right: 30px;
 
     &--title {
       font-size: 20px;
@@ -20,10 +23,10 @@
     }
   }
   &_form {
-    // min-height: 158px;
-    margin-right: 69px;
+    max-height: 158px;
     display: flex;
     flex-direction: column;
+    min-width: 292px;
     &--title {
       font-size: 20px;
       text-transform: uppercase;
@@ -36,6 +39,7 @@
         margin-bottom: 21px;
       }
       input {
+        border-radius: 0px;
         width: 100%;
         border: none;
         border-bottom: 1px solid $mainColor;
@@ -43,7 +47,6 @@
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 300;
-        line-height: 18px;
 
         &::placeholder {
           color: $placeholderColor;
@@ -63,13 +66,68 @@
         cursor: pointer;
         border: none;
         background-color: transparent;
+        color: $mainColor;
       }
     }
     &_copyright {
       font-weight: 300;
       font-size: 14px;
       text-transform: uppercase;
-      line-height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .footer {
+    &_folow {
+      max-width: 136px;
+      &_icons {
+        flex-wrap: wrap;
+        a {
+          margin-right: 13px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 44px 20px;
+    &_form {
+      width: 292px;
+      margin-right: 0;
+    }
+    &_folow {
+      width: 100%;
+      max-width: 292px;
+      margin-right: 0;
+      &_icons {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 40px 20px;
+    &__container {
+      flex-direction: column;
+    }
+    &_folow {
+      min-width: 100%;
+      margin-bottom: 40px;
+    }
+    &_form {
+      // min-width: 332px;
+      width: 100%;
     }
   }
 }

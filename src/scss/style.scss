@@ -15,6 +15,10 @@ body {
   margin-left: auto;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .page_wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -30,15 +34,31 @@ body {
 }
 
 .header {
+  box-sizing: border-box;
   grid-area: header;
 }
 
 .page {
+  box-sizing: border-box;
   grid-area: content;
 }
 
 .footer {
+  box-sizing: border-box;
   grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  .page_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'header'
+      'content'
+      'footer';
+    padding: 0;
+  }
 }
 
 //pages
