@@ -1,5 +1,4 @@
 .footer {
-  padding-right: 69px;
   &__container {
     padding: 60px 0 42px 0;
     display: flex;
@@ -91,7 +90,9 @@
         flex-wrap: wrap;
         a {
           margin-right: 13px;
-          margin-bottom: 20px;
+          &:nth-child(1) {
+            margin-bottom: 40px;
+          }
         }
       }
     }
