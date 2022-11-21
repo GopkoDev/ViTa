@@ -9,4 +9,21 @@
   cursor: pointer;
   border: 1px solid $mainColor;
   color: $mainColor;
+  &:hover {
+    background-color: $mainColor;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 14px 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .button {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
 }

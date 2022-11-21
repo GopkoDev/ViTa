@@ -63,11 +63,13 @@ body {
 
 //pages
 @import 'pages/home';
+@import 'pages/projects';
 
 // components
 @import 'components/header';
 @import 'components/button';
 @import 'components/footer';
+@import 'components/project_item.scss';
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
 // @import 'base/mixins';
 
