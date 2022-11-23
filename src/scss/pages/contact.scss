@@ -1,0 +1,134 @@
+.contact {
+  &__container {
+  }
+  &_headline {
+    display: flex;
+    flex-direction: row;
+    &_img {
+      max-width: 576px;
+      img {
+        width: 100%;
+      }
+    }
+    &_content {
+      margin-top: auto;
+      margin-left: auto;
+      padding-left: 20px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      min-width: 356px;
+      &--headline {
+      }
+      &--email {
+        span {
+          font-weight: 500;
+        }
+      }
+      &--button {
+        margin-top: 32px;
+        display: block;
+      }
+    }
+  }
+  &_contacts {
+    p {
+    }
+    link {
+    }
+    &_main {
+      &--title {
+      }
+      &--data {
+      }
+    }
+    &_social {
+      &--title {
+      }
+      &--data {
+      }
+    }
+    &_address {
+      &--title {
+      }
+      &--data {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    &__container {
+    }
+    &_headline {
+      flex-direction: column;
+      align-items: center;
+      &_img {
+      }
+      &_content {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 32px;
+        padding-left: 0;
+        &--headline {
+        }
+        &--email {
+          span {
+          }
+        }
+        &--button {
+          margin: 0 auto;
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    &__container {
+    }
+    &_headline {
+      &_img {
+        min-width: 100%;
+      }
+      &_content {
+        font-size: 18px;
+        &--headline {
+          display: inline;
+        }
+        &--email {
+          display: inline;
+          span {
+          }
+        }
+        &--button {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contact {
+    &__container {
+    }
+    &_headline {
+      &_img {
+      }
+      &_content {
+        font-size: 14px;
+        &--headline {
+        }
+        &--email {
+          span {
+          }
+        }
+        &--button {
+        }
+      }
+    }
+  }
+}
