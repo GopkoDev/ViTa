@@ -45,8 +45,7 @@
     p {
       font-weight: 400;
       margin-top: 40px;
-      &:first-child,
-      &:nth-child(2) {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -145,27 +144,31 @@
       p {
         margin-top: 20px;
         &:first-child {
-          margin-top: 0;
+          margin-top: 20px;
         }
       }
-  }
+      &_main {
+        margin-top: -20px;
+      }
+    }
 
-  @media screen and (max-width: 375px) {
-    .contact {
-      &__container {
-      }
-      &_headline {
-        &_img {
+    @media screen and (max-width: 375px) {
+      .contact {
+        &__container {
         }
-        &_content {
-          font-size: 14px;
-          &--headline {
+        &_headline {
+          &_img {
           }
-          &--email {
-            span {
+          &_content {
+            font-size: 14px;
+            &--headline {
             }
-          }
-          &--button {
+            &--email {
+              span {
+              }
+            }
+            &--button {
+            }
           }
         }
       }
