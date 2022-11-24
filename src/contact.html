@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"My Contacts" })
+  <body>
+    <section class="page_wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page contact">
+        <section class="contact__container">
+          <section class="contact_headline">
+            <section class="contact_headline_img">
+              <img src="@img/contact_page_photo.png" alt="Monka photo" />
+            </section>
+            <section class="contact_headline_content">
+              <p class="contact_headline_content--headline">
+                For all inquiries and general information
+              </p>
+              <p class="contact_headline_content--email">
+                contact: <span>hello@taniamonics.com</span>
+              </p>
+              <button class="button contact_headline_content--button">
+                connect
+              </button>
+            </section>
+          </section>
+
+          <section class="contact_contacts">
+            <section class="contact_contacts_main">
+                <p class="contact_contacts_main--title">phone</p>
+                <!-- add link TEL  -->
+                <link rel="stylesheet" href="#" class="contact_contacts_main--data">+39 347 4374756</link> 
+                <p class="contact_contacts_main--title">Email</p>
+                 <!-- add link MAIL TO -->
+                <link rel="stylesheet" href="#" class="contact_contacts_main--data">hello@taniamonics.com</link> 
+            </section>
+            <section class="contact_contacts_social">
+                <p class="contact_contacts_social--title">behance</p>
+                <link rel="stylesheet" class="contact_contacts_social--data" href="#">monka</link>
+                <p class="contact_contacts_social--title">Instagram</p>
+                <link rel="stylesheet" href="#" class="contact_contacts_social--data">@monka</link>
+            </section>
+            <section class="contact_contacts_address">
+                <p class="contact_contacts_address--title">Address</p>
+                <link rel="stylesheet" href="#" class="contact_contacts_address--data">Via Giuseppe Mazzini, 9 20123 Milano MI</link>
+            </section>
+          </section>
+
+        <form action="" class="contact_form">
+            <h1 class="contact_form--title">LET'S WORK TOGETHER</h1>
+            <p class="contact_form--subtitle">Send me a message to discuss your project in further detail.</p>
+            <label for=""><input type="text" class="contact_form--input" placeholder="NAME">
+            </label>
+            <input type="text" class="contact_form--input" placeholder="EMAIL">
+            <input type="text" class="contact_form--input" placeholder="PHONE">
+            <input type="textarea" class="contact_form--input contact_form--input-textarea" placeholder="MESSAGE">
+            <button class="button contact_form--button">send message</button>
+            </form>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </section>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
