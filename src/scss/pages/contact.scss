@@ -1,6 +1,4 @@
 .contact {
-  &__container {
-  }
   &_headline {
     display: flex;
     flex-direction: row;
@@ -72,6 +70,46 @@
       }
       &--data {
       }
+    }
+  }
+  &_form {
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    margin-top: 150px;
+    padding-bottom: 150px;
+    max-width: 592px;
+    padding: 0 20px;
+    &--title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 42px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &--subtitle {
+      font-weight: 300;
+      font-style: 18px;
+      line-height: 25px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    &--input {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 28px;
+      width: 100%;
+      padding: 16px;
+      &:nth-child(3) {
+        margin-top: 52px;
+      }
+    }
+    &--input-textarea {
+    }
+    &--button {
+      margin: 0 auto;
+      margin-top: 52px;
+      display: block;
     }
   }
 }
