@@ -1,4 +1,7 @@
 .home {
+  &__container {
+    text-align: center;
+  }
   &_img {
     margin-bottom: 150px;
     img {
@@ -17,8 +20,6 @@
     }
   }
   &_button {
-    display: block;
-    margin: 0 auto;
     margin-bottom: 150px;
   }
 }
