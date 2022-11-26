@@ -1,0 +1,121 @@
+.project {
+  &__container {
+    padding-bottom: 150px;
+  }
+  &_img {
+    margin-top: 150px;
+    img {
+      width: 100%;
+    }
+  }
+  &_about {
+    margin-top: 150px;
+    padding: 100px 0;
+    border-top: 1px solid $mainColor;
+    border-bottom: 1px solid $mainColor;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+
+    text-align: center;
+  }
+  &_nav {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    &--link {
+      text-transform: uppercase;
+      color: $mainColor;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    &__container {
+      padding: 0 20px 120px 20px;
+    }
+    &_header {
+      .projects_item_information {
+        display: none;
+      }
+      .projects_item_information--button {
+        display: none;
+      }
+      .projects_item_information--item {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .projects_item_information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+    &_img {
+      margin-top: 120px;
+    }
+    &_nav {
+      margin-top: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .project {
+    &_header {
+      .projects_item_information {
+        flex-direction: column;
+      }
+      .projects_item_information--list {
+        margin: 0;
+        &:last-child {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+      .projects_item_information--item {
+        margin-top: 8px;
+        &:first-child {
+          margin-top: 8px;
+        }
+      }
+      .projects_item_information--item-title {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .project {
+    &__container {
+      padding: 0 20px 100px 20px;
+    }
+    &_header {
+      .projects_item_information {
+        margin-top: 20px;
+      }
+    }
+    &_img {
+      margin-top: 100px;
+    }
+    &_about {
+      margin-top: 100px;
+      padding: 40px 0;
+      font-size: 14px;
+    }
+    &_nav {
+      margin-top: 40px;
+      &--link {
+        font-size: 16px;
+      }
+    }
+  }
+}
