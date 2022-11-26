@@ -120,13 +120,21 @@
       margin-right: 0;
       &_icons {
         justify-content: space-between;
+        padding-right: 20px;
+        a {
+          margin-right: 0;
+          &:nth-child(1) {
+            margin-bottom: 0;
+          }
+        }
       }
-      &--title {
-        font-size: 18px;
-      }
+    }
+    &--title {
+      font-size: 18px;
     }
   }
 }
+
 @media screen and (max-width: 600px) {
   .footer {
     padding: 40px 20px;
