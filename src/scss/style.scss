@@ -41,6 +41,7 @@ body {
 .page {
   box-sizing: border-box;
   grid-area: content;
+  min-height: calc(100vh - 80px - 258px);
 }
 
 .footer {

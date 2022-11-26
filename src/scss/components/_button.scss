@@ -15,6 +15,12 @@
   }
 }
 
+a.button {
+  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+}
+
 @media screen and (max-width: 768px) {
   .button {
     padding: 14px 20px;

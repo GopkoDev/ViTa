@@ -23,10 +23,10 @@
     &--item {
       font-size: 20px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-top: 12px;
       cursor: pointer;
-      &:last-child {
-        margin-bottom: 0;
+      &:first-child {
+        margin-top: 0;
       }
 
       &.active {
@@ -112,6 +112,7 @@
     &.active {
       right: 0;
       visibility: visible;
+      z-index: 2;
     }
   }
 
@@ -203,6 +204,27 @@
             font-size: 30px;
             margin-bottom: 10px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    &_logo {
+      font-size: 24px;
+    }
+    &_hamburger {
+      &--line {
+        height: 2px;
+        width: 33px;
+      }
+    }
+    &_nav {
+      &--item {
+        p {
+          font-size: 32px;
         }
       }
     }
