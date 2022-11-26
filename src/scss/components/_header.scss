@@ -112,6 +112,7 @@
     &.active {
       right: 0;
       visibility: visible;
+      z-index: 2;
     }
   }
 
