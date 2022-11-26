@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"EONIA PROJECT PAGE" })
+  <body>
+    <section class="page_wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page project">
+        <section class="project__container">
+          <!--  -->
+          <section class="project_header">
+            @@include('html/_project_item.htm',{ "project": "eunoia", "year":
+            "2020", "location": "Ukraine", "type": "COMMERCIAL, RETAIL",
+            "phase": "CONCEPT", "deisgner": "Monka", "collaboration": "NULL",
+            "digitalArtist": "volodymyr", "id": "2", "folder_img": "eunoia" })
+          </section>
+          <!--  -->
+          <div class="project_img">
+            <img
+              src="@img/projects_img/eunoia/2.png"
+              alt="eunoia project photo"
+            />
+          </div>
+          <section class="project_about">
+            <p>
+              EUNOIA from greek means beautiful thinking. Designed for the
+              showroom of the clothing and accessories. Depending on geometry
+              and complexity of.
+            </p>
+          </section>
+          <div class="project_img">
+            <img
+              src="@img/projects_img/eunoia/3.png"
+              alt="eunoia project photo"
+            />
+          </div>
+          <div class="project_img">
+            <img
+              src="@img/projects_img/eunoia/4.png"
+              alt="eunoia project photo"
+            />
+          </div>
+          <section class="project_nav">
+            <a href="" class="project_nav--link">Previous project</a>
+            <a href="" class="project_nav--link">next project</a>
+          </section>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </section>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
