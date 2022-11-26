@@ -208,3 +208,24 @@
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .header {
+    &_logo {
+      font-size: 24px;
+    }
+    &_hamburger {
+      &--line {
+        height: 2px;
+        width: 33px;
+      }
+    }
+    &_nav {
+      &--item {
+        p {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
