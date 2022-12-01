@@ -49,6 +49,11 @@ body {
   grid-area: footer;
 }
 
+//formClasses
+._error {
+  border: 1px solid red !important;
+}
+
 @media screen and (max-width: 768px) {
   .page_wrapper {
     display: grid;
