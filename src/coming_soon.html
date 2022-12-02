@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Coming Soon | ViTa</title>
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+      }
+      h1,
+      h2,
+      body {
+        margin: 0;
+      }
+      body {
+        padding: 60px 80px;
+        min-height: 100vh;
+      }
+      .logo {
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #282828;
+      }
+      main {
+        height: calc(100vh - 60px - 60px - 48px);
+        display: flex;
+        align-items: center;
+      }
+      .headline {
+        font-weight: 300;
+        font-size: 54px;
+        letter-spacing: 0.4em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #282828;
+        width: 100%;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 50px 20px;
+          min-height: 100vh;
+        }
+        .logo {
+          font-size: 32px;
+        }
+        main {
+          height: calc(100vh - 50px - 50px - 38px);
+        }
+        .headline {
+          font-size: 40px;
+          letter-spacing: 0.34em;
+        }
+      }
+      @media screen and (max-width: 375px) {
+        body {
+          min-height: 100vh;
+        }
+        .logo {
+          font-size: 28px;
+        }
+        main {
+          height: calc(100vh - 50px - 50px - 34px);
+        }
+        .headline {
+          font-size: 30px;
+          letter-spacing: 0.24em;
+        }
+      }
+    </style>
+    <header>
+      <h1 class="logo">MONICS</h1>
+    </header>
+    <main>
+      <h2 class="headline">coming soon</h2>
+    </main>
+  </body>
+</html>
