@@ -14,12 +14,26 @@
 export function formValidation(event, formClass) {
   event.preventDefault();
   const form = document.querySelector(formClass);
+  let formData = new FormData(form);
 
-  function formSend() {
+  async function formSend() {
     let error = validate(form);
     console.log(error);
     if (error === 0) {
-      console.log('form send');
+      form.classList.add('_sending');
+      let reesponse = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData,
+      });
+      if (reesponse.ok) {
+        let result = await reesponse.json();
+        alert(result.message);
+        form.reset();
+        form.classList.remove('_sending');
+      } else {
+        form.classList.remove('_sending');
+        alert('Error');
+      }
     } else {
       console.log('form error');
     }

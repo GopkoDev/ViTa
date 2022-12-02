@@ -26,14 +26,26 @@
 	//Кому отправить
 	$mail->addAddress('to@gmail.com'); // Указать нужный E-mail
 	//Тема письма
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"';
+	$mail->Subject = 'ViTa NEW MESAAGE';
 
 	//Тело письма
 	$body = '<h1>Встречайте супер письмо!</h1>';
 
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
+	if(trim(!empty($_POST['name']))){
+		$body.=$_POST['name'];
+	}	
+
+	if(trim(!empty($_POST['email']))){
+		$body.=$_POST['email'];
+	}	
+
+	if(trim(!empty($_POST['phone']))){
+		$body.=$_POST['phone'];
+	}	
+
+	if(trim(!empty($_POST['message']))){
+		$body.=$_POST['message'];
+	}	
 	
 	/*
 	//Прикрепить файл
