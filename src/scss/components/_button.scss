@@ -12,6 +12,8 @@
   &:hover {
     background-color: $mainColor;
     color: #fff;
+    transform: scale(1.03);
+    transition: all 0.2s;
   }
 }
 
@@ -24,6 +26,18 @@ a.button {
 @media screen and (max-width: 768px) {
   .button {
     padding: 14px 20px;
+    &:hover {
+      background-color: #fff;
+      color: $mainColor;
+      transform: scale(1);
+      transition: all 0.2s;
+    }
+    &:active {
+      background-color: $mainColor;
+      color: #fff;
+      transform: scale(1.03);
+      transition: all 0.2s;
+    }
   }
 }
 
