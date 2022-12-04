@@ -16,9 +16,8 @@
       <li class="header_nav--item language">
         <p class="language_current">ENG</p>
         <ul class="language_body">
-          <li class="language_body--item">ENG</li>
-          <li class="language_body--item">FR</li>
-          <li class="language_body--item">UKR</li>
+          <!-- <li class="language_body--item">It</li>
+          <li class="language_body--item">ua</li> -->
         </ul>
       </li>
     </ul>
@@ -29,11 +28,39 @@
     language.addEventListener('click', () => {
       toggleClassName(language, 'open');
     });
+
+    //current language logic
+    const languages = [
+      { lang: 'ENG', value: 'en' },
+      { lang: 'IT', value: 'it' },
+      { lang: 'UA', value: 'uk' },
+    ];
+
+    const createLangMenuBody = () => {
+      const currentPageLanguage = document.querySelector('html').lang;
+      const langMenuBody = document.querySelector('.language_body');
+      const cuerrentLanguage = document.querySelector('.language_current');
+
+      langMenuBody.innerHTML = '';
+
+      languages.forEach((language) => {
+        const langItem = document.createElement('li');
+
+        if (language.value !== currentPageLanguage) {
+          langItem.classList.add('language_body--item');
+          langItem.textContent = language.lang;
+          langMenuBody.appendChild(langItem);
+        } else {
+          cuerrentLanguage.textContent = language.lang;
+        }
+      });
+    };
+    createLangMenuBody();
+
     //menu hamburger
     const body = document.querySelector('body');
     const humburher = document.querySelector('.header_hamburger');
     const navBody = document.querySelector('.nav_wrapper');
-    console.log(body);
     humburher.addEventListener('click', () => {
       toggleClassName(humburher, 'active');
       toggleClassName(navBody, 'active');
