@@ -35,9 +35,14 @@
         }
       }
 
+      a {
+        text-decoration: none;
+        color: $mainColor;
+      }
+
       &.active {
         font-weight: 700;
-        p {
+        a {
           width: fit-content;
           position: relative;
           &::after {
@@ -169,7 +174,7 @@
         &:hover {
           font-weight: 400;
         }
-        p {
+        a {
           font-size: 38px;
         }
       }
@@ -224,7 +229,7 @@
     }
     &_nav {
       &--item {
-        p {
+        a {
           font-size: 32px;
         }
       }
