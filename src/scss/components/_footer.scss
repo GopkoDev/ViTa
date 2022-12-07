@@ -74,10 +74,15 @@
         font-weight: 300;
 
         &::placeholder {
+          font-weight: 300;
           color: $placeholderColor;
         }
         &:focus {
           outline: none;
+          &::placeholder {
+            color: $mainColor;
+            font-weight: 500;
+          }
         }
       }
       button {

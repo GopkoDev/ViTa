@@ -9,16 +9,17 @@
   </section>
   <nav class="nav_wrapper">
     <ul class="header_nav">
-      <li class="header_nav--item active"><p>HOME</p></li>
-      <li class="header_nav--item"><p>PROJECTS</p></li>
-      <li class="header_nav--item"><p>ABOUT ME</p></li>
-      <li class="header_nav--item"><p>CONTACT</p></li>
+      <li class="header_nav--item"><a href="./home.html">HOME</a></li>
+      <li class="header_nav--item">
+        <a href="./projects.html">PROJECTS</a>
+      </li>
+      <li class="header_nav--item"><a href="./about_me.html">ABOUT ME</a></li>
+      <li class="header_nav--item"><a href="./contact.html">CONTACT</a></li>
       <li class="header_nav--item language">
-        <p class="language_current">ENG</p>
+        <a class="language_current">ENG</a>
         <ul class="language_body">
-          <li class="language_body--item">ENG</li>
-          <li class="language_body--item">FR</li>
-          <li class="language_body--item">UKR</li>
+          <!-- <li class="language_body--item">It</li>
+          <li class="language_body--item">ua</li> -->
         </ul>
       </li>
     </ul>
@@ -29,11 +30,56 @@
     language.addEventListener('click', () => {
       toggleClassName(language, 'open');
     });
+    //highlight Current Nav Link
+    const highlightCurrentNavLink = () => {
+      const navLinks = document.querySelectorAll('.header_nav--item');
+      const currentPath = window.location.pathname;
+      console.log(navLinks);
+      navLinks.forEach((link) => {
+        const linkPath = link.querySelector('a').textContent.toLowerCase();
+        if (currentPath.includes(linkPath)) {
+          link.classList.add('active');
+        } else if (currentPath.split('_')[0] === '/project') {
+          navLinks[1].classList.add('active');
+        } else if (currentPath.split('_')[0] === '/about') {
+          navLinks[2].classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    };
+
+    //current language logic
+    const languages = [
+      { lang: 'ENG', value: 'en' },
+      { lang: 'IT', value: 'it' },
+      { lang: 'UA', value: 'uk' },
+    ];
+
+    const createLangMenuBody = () => {
+      const currentPageLanguage = document.querySelector('html').lang;
+      const langMenuBody = document.querySelector('.language_body');
+      const cuerrentLanguage = document.querySelector('.language_current');
+
+      langMenuBody.innerHTML = '';
+
+      languages.forEach((language) => {
+        const langItem = document.createElement('li');
+
+        if (language.value !== currentPageLanguage) {
+          langItem.classList.add('language_body--item');
+          langItem.textContent = language.lang;
+          langMenuBody.appendChild(langItem);
+        } else {
+          cuerrentLanguage.textContent = language.lang;
+        }
+      });
+    };
+
     //menu hamburger
     const body = document.querySelector('body');
     const humburher = document.querySelector('.header_hamburger');
     const navBody = document.querySelector('.nav_wrapper');
-    console.log(body);
     humburher.addEventListener('click', () => {
       toggleClassName(humburher, 'active');
       toggleClassName(navBody, 'active');
@@ -50,5 +96,7 @@
     const toggleClassName = (item, className) => {
       item.classList.toggle(className);
     };
+    highlightCurrentNavLink();
+    createLangMenuBody();
   </script>
 </header>
