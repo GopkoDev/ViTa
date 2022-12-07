@@ -21,7 +21,7 @@ export function formValidation(event, formClass) {
     console.log(error);
     if (error === 0) {
       form.classList.add('_sending');
-      let reesponse = await fetch('sendmail.php', {
+      let reesponse = await fetch('../componetns/sendmail/sendmail.php', {
         method: 'POST',
         body: formData,
       });
