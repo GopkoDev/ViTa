@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?8s33cs');
+  src: url('../fonts/icomoon.eot?8s33cs#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?8s33cs') format('truetype'),
+    url('../fonts/icomoon.woff?8s33cs') format('woff'),
+    url('../fonts/icomoon.svg?8s33cs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 22px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inst:before {
+  content: '\e905';
+}
+.icon-li:before {
+  content: '\e906';
+}
+.icon-phone:before {
+  content: '\e907';
+}
+.icon-pinterest:before {
+  content: '\e908';
+}
+.icon-email:before {
+  content: '\e909';
+}

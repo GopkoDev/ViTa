@@ -14,11 +14,30 @@
     &--title {
       font-size: 20px;
       text-transform: uppercase;
-      margin-bottom: 52px;
     }
     &_icons {
       display: flex;
       justify-content: space-between;
+      margin-top: 52px;
+      a {
+        text-decoration: none;
+        color: $mainColor;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: relative;
+        &:hover {
+          color: #fff;
+          background-color: #000;
+          transition: all 0.3s;
+        }
+        &::before {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
     }
   }
   &_form {
@@ -94,12 +113,11 @@
     &_folow {
       max-width: 136px;
       &_icons {
+        margin-top: 13px;
         flex-wrap: wrap;
         a {
           margin-right: 13px;
-          &:nth-child(1) {
-            margin-bottom: 40px;
-          }
+          margin-top: 5px;
         }
       }
     }
@@ -128,6 +146,14 @@
         padding-right: 20px;
         a {
           margin-right: 0;
+          &:hover {
+            background-color: #fff;
+            color: $mainColor;
+          }
+          &:active {
+            background-color: $mainColor;
+            color: #fff;
+          }
           &:nth-child(1) {
             margin-bottom: 0;
           }
