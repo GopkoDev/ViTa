@@ -51,6 +51,7 @@ body {
 }
 
 ._mouse {
+  z-index: 2147483647;
   position: fixed;
   width: 8px;
   height: 8px;
