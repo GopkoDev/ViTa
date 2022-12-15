@@ -103,9 +103,19 @@
       &:nth-child(3) {
         margin-top: 52px;
       }
+      &::placeholder {
+        color: $placeholderColor;
+        font-weight: 300;
+      }
+      &:focus {
+        outline: none;
+        &::placeholder {
+          color: $mainColor;
+          font-weight: 400;
+        }
+      }
     }
-    &--input-textarea {
-    }
+
     &--button {
       margin: 0 auto;
       margin-top: 52px;

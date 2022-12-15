@@ -217,4 +217,7 @@ import * as flsScroll from './files/scroll/scroll.js';
 import './files/script.js';
 import '../contact.js';
 import '../html/footer.js';
+import './files/script.js';
+import './moseHandlerAnimation.js';
+
 //============================================================================================================================================================================================================================================

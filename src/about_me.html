@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"BLANK" })
+  <body>
+    <section class="page_wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page error">
+        <section class="error__container">
+          <section class="error_content">
+            <section class="error_content--img">
+              <img src="@img/404.svg" alt="" />
+            </section>
+            <h1 class="error_content--title">in progress</h1>
+            <a href="./home.html" class="error_content--button button"
+              >go home</a
+            >
+          </section>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </section>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
