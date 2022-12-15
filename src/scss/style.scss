@@ -50,6 +50,19 @@ body {
   grid-area: footer;
 }
 
+._mouse {
+  z-index: 2147483647;
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: $mainColor;
+  left: 0;
+  top: 0;
+  transition: 0.1s;
+}
+
 @media screen and (max-width: 768px) {
   .page_wrapper {
     display: grid;
