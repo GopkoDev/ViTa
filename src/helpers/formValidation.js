@@ -12,7 +12,6 @@
 // '_error'
 
 export function formValidation(event, formClass) {
-  event.preventDefault();
   const form = document.querySelector(formClass);
   let formData = new FormData(form);
 
@@ -62,12 +61,12 @@ export function formValidation(event, formClass) {
     return error;
   }
   const formAddError = (input) => {
-    // input.parentElement.classList.add('_error');
-    input.classList.add('_error');
+    input.parentElement.classList.add('_error');
+    // input.classList.add('_error');
   };
   const removeError = (input) => {
-    // input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
+    input.parentElement.classList.remove('_error');
+    // input.classList.remove('_error');
   };
   const emailTest = (input) => {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);

@@ -124,6 +124,26 @@
   }
 }
 
+//formValidationClasses
+.contact_form > label {
+  position: relative;
+  &._error {
+    .contact_form--input-error {
+      visibility: visible;
+    }
+  }
+}
+
+.contact_form--input-error {
+  visibility: hidden;
+  color: #fd3d3d;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+
 @media screen and (max-width: 1024px) {
   .contact {
     &__container {
