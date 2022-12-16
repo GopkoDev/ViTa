@@ -1,11 +1,10 @@
 import { formValidation } from '../helpers/formValidation.js';
 
 const button = document.querySelector('.contact_form--button');
-
 const mail = document.getElementById('contact_form_email');
 const phone = document.getElementById('contact_form_phone');
 
-const requiredPhoneorMail = () => {
+const requiredPhoneOrMail = () => {
   if (mail.value !== '') {
     phone.classList.remove('_req');
     phone.parentElement.classList.remove('_error');
@@ -18,8 +17,17 @@ const requiredPhoneorMail = () => {
   }
 };
 
+phone.addEventListener('focus', (e) => {
+  if (e.target.value.length > 1) return;
+  e.target.value = '+';
+});
+
+phone.addEventListener('keypress', (e) => {
+  if (!/\d/.test(e.key)) e.preventDefault();
+});
+
 button?.addEventListener('click', (e) => {
   e.preventDefault();
-  requiredPhoneorMail();
+  requiredPhoneOrMail();
   formValidation(e, '.contact_form');
 });

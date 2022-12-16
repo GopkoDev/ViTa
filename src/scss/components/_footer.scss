@@ -107,6 +107,12 @@
   }
 }
 
+//form validation classes
+
+.footer_form_lable._error {
+  border-bottom: 1px solid #fd3d3d;
+}
+
 @media screen and (max-width: 1000px) {
   .footer {
     padding-right: 0;
