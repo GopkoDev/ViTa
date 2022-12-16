@@ -215,8 +215,8 @@ import * as flsScroll from './files/scroll/scroll.js';
 /* Подключаем файлы со своим кодом */
 
 import './files/script.js';
-import '../contact.js';
-import '../html/footer.js';
+import './contact.js';
+import './footer.js';
 import './files/script.js';
 import './moseHandlerAnimation.js';
 

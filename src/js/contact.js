@@ -1,4 +1,4 @@
-import { formValidation } from './helpers/formValidation.js';
+import { formValidation } from '../helpers/formValidation.js';
 
 const buuton = document.querySelector('.contact_form--button');
 
