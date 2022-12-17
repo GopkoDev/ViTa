@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Message has been sent!" })
+  <body>
+    <section class="page_wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page message">
+        <h1 class="message--title">Your message has been successfully sent!</h1>
+        <p class="message--subtitle">
+          Thank you for your message! We will contact you soon.
+        </p>
+        <a href="./home.html" class="message--button button">go home</a>
+      </main>
+      @@include('html/_footer.htm',{})
+    </section>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

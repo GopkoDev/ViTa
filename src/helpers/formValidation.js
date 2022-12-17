@@ -25,8 +25,9 @@ export function formValidation(event, formClass) {
         body: formData,
       });
       if (reesponse.ok) {
-        let result = await reesponse.json();
-        alert(result.message);
+        // let result = await reesponse.json();
+        // alert(result.message);
+        window.location.href = './message_was_sent.html';
         form.reset();
         form.classList.remove('_sending');
       } else {
@@ -49,6 +50,11 @@ export function formValidation(event, formClass) {
         formAddError(input);
         error++;
         return;
+      }
+
+      if (input.classList.contains('_phone') && input.value.length === 1) {
+        formAddError(input);
+        error++;
       }
 
       if (input.classList.contains('_email')) {

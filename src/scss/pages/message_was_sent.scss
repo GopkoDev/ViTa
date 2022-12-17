@@ -1,0 +1,41 @@
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-align: center;
+  &--title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    max-width: 395px;
+  }
+  &--subtitle {
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 32px;
+  }
+  &--button {
+    margin-top: 52px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .message {
+    &--subtitle {
+      line-height: 30px;
+      max-width: 308px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .message {
+    &--title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+}
