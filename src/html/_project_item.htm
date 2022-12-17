@@ -1,10 +1,18 @@
 <section class="projects_item projects_item_@@id">
-  <img
-    class="projects_item--img"
-    data-link="img/projects_img/@@folder_img/1.png"
-    src=""
-    alt="main piture of @@project project"
-  />
+  <div class="projects_item--photo_wrapper">
+    <img
+      class="projects_item--photo_wrapper-img"
+      data-link="img/projects_img/@@folder_img/1.png"
+      src=""
+      alt="main piture of @@project project"
+    />
+    <a
+      href="#"
+      class="projects_item--photo_wrapper-hover_button project-button"
+    >
+      view project
+    </a>
+  </div>
   <section class="projects_item_information">
     <ul class="projects_item_information--list">
       <li
@@ -38,9 +46,9 @@
   <button class="projects_item_information--button button">view project</button>
 </section>
 <script>
-  Array.from(document.getElementsByClassName('projects_item--img')).forEach(
-    (item) => {
-      item.src = item.dataset.link;
-    }
-  );
+  Array.from(
+    document.getElementsByClassName('projects_item--photo_wrapper-img')
+  ).forEach((item) => {
+    item.src = item.dataset.link;
+  });
 </script>
