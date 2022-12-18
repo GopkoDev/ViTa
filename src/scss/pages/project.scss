@@ -21,13 +21,23 @@
   }
   &_nav {
     margin-top: 80px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     &--link {
       text-transform: uppercase;
       color: $mainColor;
       font-weight: 500;
       font-size: 20px;
+      width: 100%;
+      &:hover {
+        font-weight: 700;
+      }
+      &-prev {
+        text-align: left;
+      }
+      &-next {
+        text-align: right;
+      }
     }
   }
 }
