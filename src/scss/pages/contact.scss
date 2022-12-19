@@ -100,6 +100,9 @@
       margin-top: 28px;
       width: 100%;
       padding: 16px;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
       &:nth-child(3) {
         margin-top: 52px;
       }
@@ -111,7 +114,6 @@
         outline: none;
         &::placeholder {
           color: $mainColor;
-          font-weight: 400;
         }
       }
     }
@@ -122,6 +124,26 @@
       display: block;
     }
   }
+}
+
+//formValidationClasses
+.contact_form > label {
+  position: relative;
+  &._error {
+    .contact_form--input-error {
+      visibility: visible;
+    }
+  }
+}
+
+.contact_form--input-error {
+  visibility: hidden;
+  color: #fd3d3d;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
 }
 
 @media screen and (max-width: 1024px) {

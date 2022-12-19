@@ -44,15 +44,25 @@
             </section>
           </section>
 
-        <form action="" class="contact_form">
+        <form action="#" class="contact_form">
             <h1 class="contact_form--title">LET'S WORK TOGETHER</h1>
             <p class="contact_form--subtitle">Send me a message to discuss your project in further detail.</p>
-            <label for=""><input type="text" class="contact_form--input" placeholder="NAME">
+            <label for="contact_form_name">
+              <input id="contact_form_name" type="text" name="name" class="contact_form--input _req" placeholder="NAME">
+              <p id = 'contact_form_name_error' class="contact_form--input-error">please Enter your name</p>
             </label>
-            <input type="text" class="contact_form--input" placeholder="EMAIL">
-            <input type="text" class="contact_form--input" placeholder="PHONE">
-            <input type="textarea" class="contact_form--input contact_form--input-textarea" placeholder="MESSAGE">
-            <button class="button contact_form--button">send message</button>
+            <label for="">
+              <input id="contact_form_email" type="text" name="email" class="contact_form--input _email _req" placeholder="EMAIL">
+            <p id = 'contact_form_email_error' class="contact_form--input-error">please Enter your email or phone</p>
+            </label>
+            <label for="contact_form_phone">
+              <input id = 'contact_form_phone' type="text" name="phone" class="contact_form--input _phone _req" placeholder="PHONE" maxlength="30">
+              <p id = 'contact_form_phone_error' class="contact_form--input-error">please Enter your phone or email</p>
+            </label>
+            <label for="contact_form_textarea">
+              <input id = 'contact_form_textarea' type="textarea" name="message" class="contact_form--input contact_form--input-textarea" placeholder="MESSAGE">
+              <button class="button contact_form--button">send message</button>
+            </label>
             </form>
         </section>
       </main>
