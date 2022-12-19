@@ -1,0 +1,298 @@
+.culture {
+  &--main {
+    display: flex;
+    justify-content: space-between;
+    &-img {
+      box-sizing: border-box;
+      max-width: 576px;
+      img {
+        width: 100%;
+      }
+    }
+    &-headline {
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      font-family: 'Roboto';
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 376px;
+      padding-left: 20px;
+      h1 {
+        span {
+          font-weight: 500;
+        }
+      }
+      h2 {
+        margin-top: 30px;
+      }
+    }
+  }
+  &--projects {
+    margin-top: 150px;
+    text-align: center;
+
+    &-title {
+      font-size: 20px;
+      line-height: 22px;
+      text-transform: uppercase;
+      font-weight: 300;
+      span {
+        font-weight: 500;
+      }
+    }
+    &-button {
+      margin-top: 52px;
+    }
+  }
+  &--spaces {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    &-headline {
+      box-sizing: border-box;
+      max-width: 376px;
+      padding-right: 20px;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 300;
+      span {
+        font-weight: 500;
+      }
+      p {
+        &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+    &-img {
+      max-width: 576px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &--team {
+    margin-top: 150px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+
+    &-headline {
+      padding: 100px 0;
+      border-top: 1px solid $mainColor;
+      border-bottom: 1px solid $mainColor;
+      line-height: 30px;
+      p {
+        &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+    &-img {
+      margin-top: 150px;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    &-subtitle {
+      margin-top: 32px;
+      line-height: 22px;
+      text-transform: uppercase;
+      display: inline-block;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 58px;
+        height: 1px;
+        background-color: $mainColor;
+        top: 50%;
+      }
+      &::before {
+        left: -70px;
+      }
+      &::after {
+        right: -70px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 954px) {
+  .culture {
+    &--team {
+      &-subtitle {
+        line-height: 30px;
+        max-width: 342px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .culture {
+    padding: 0 20px;
+    &--main {
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      &-img {
+        max-width: 100%;
+        width: 100%;
+      }
+      &-headline {
+        max-width: 579px;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 32px;
+      }
+    }
+    &--projects {
+      margin-top: 120px;
+      &-title {
+        line-height: 34px;
+        max-width: 634px;
+        margin: 0 auto;
+      }
+      &-button {
+        margin-top: 44px;
+      }
+    }
+    &--spaces {
+      margin-top: 120px;
+      &-headline {
+        max-width: 307px;
+      }
+      &-img {
+        max-width: 409px;
+      }
+    }
+    &--team {
+      margin-top: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-headline {
+        padding: 80px 0;
+        font-size: 18px;
+        line-height: 25px;
+      }
+      &-subtitle {
+        max-width: fit-content;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 692px) {
+  .culture {
+    &--team {
+      &-subtitle {
+        max-width: 239px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .culture {
+    &--spaces {
+      flex-direction: column-reverse;
+      text-align: center;
+      &-headline {
+        margin-top: 120px;
+        padding: 40px 0;
+        border-top: 1px solid $mainColor;
+        border-bottom: 1px solid $mainColor;
+        max-width: 100%;
+        width: 100%;
+      }
+      &-img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .culture {
+    &--team {
+      &-subtitle {
+        font-size: 18px;
+        max-width: 239px;
+        &::before,
+        &::after {
+          width: 30px;
+        }
+        &::before {
+          left: -42px;
+        }
+        &::after {
+          right: -42px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .culture {
+    &--main {
+      &-headline {
+        max-width: 320px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    &--projects {
+      margin-top: 100px;
+      &-title {
+        font-size: 18px;
+        line-height: 31px;
+      }
+      &-button {
+        margin-top: 40px;
+      }
+    }
+    &--spaces {
+      margin-top: 100px;
+      &-headline {
+        margin-top: 100px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    &--team {
+      flex-direction: column-reverse;
+      margin-top: 100px;
+      padding-bottom: 100px;
+      &-headline {
+        margin-top: 100px;
+        padding: 40px 0;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      &-img {
+        margin-top: 0px;
+      }
+      &-subtitle {
+        margin-top: 16px;
+        max-width: 253px;
+        font-size: 18px;
+        line-height: 27px;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

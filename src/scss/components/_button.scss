@@ -23,6 +23,23 @@ a.button {
   display: inline-block;
 }
 
+.project-button {
+  padding: 18px 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 3.2px;
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .button {
     padding: 14px 20px;
@@ -38,6 +55,9 @@ a.button {
       transform: scale(1.03);
       transition: all 0.2s;
     }
+  }
+  .project-button {
+    display: none;
   }
 }
 

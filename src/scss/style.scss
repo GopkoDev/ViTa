@@ -18,6 +18,8 @@ body {
 
 .lock {
   overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .page_wrapper {
@@ -58,6 +60,7 @@ body {
   border: 2px solid #fff;
   border-radius: 50%;
   background-color: $mainColor;
+  pointer-events: none;
   left: 0;
   top: 0;
   transition: 0.1s;
@@ -83,7 +86,7 @@ body {
 @import 'pages/contact';
 @import 'pages/project';
 @import 'pages/message_was_sent';
-
+@import 'pages/culture.scss';
 // components
 @import 'components/header';
 @import 'components/button';
