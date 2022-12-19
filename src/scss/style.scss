@@ -18,6 +18,8 @@ body {
 
 .lock {
   overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .page_wrapper {
@@ -83,7 +85,7 @@ body {
 @import 'pages/404';
 @import 'pages/contact';
 @import 'pages/project';
-
+@import 'pages/culture.scss';
 // components
 @import 'components/header';
 @import 'components/button';
