@@ -2,6 +2,19 @@
   &__container {
     padding-bottom: 150px;
   }
+  &_header {
+    .projects_item--photo_wrapper {
+      &:hover {
+        .projects_item--photo_wrapper-img {
+          filter: grayscale(0);
+        }
+        .projects_item--photo_wrapper-hover_button {
+          display: none;
+        }
+      }
+    }
+  }
+
   &_img {
     margin-top: 150px;
     img {
